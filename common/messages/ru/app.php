@@ -56,5 +56,22 @@ return [
     'Articles' => 'Статьи',
     'Menu' => 'Меню',
 
+//    Sliders
+
+    'Sliders' => 'Слайдеры',
+    'Slider Photos' => 'Слайдер Фотографии',
+    'Sort' => 'Сортировать',
+    'Title Uz' => 'Название Уз',
+    'Title Ru' => 'Название Ру',
+    'Title En' => 'Название En',
+
+    'Description Ru' => 'Описание Ру',
+    'Description Uz' => 'Описание Ру',
+    'Description En' => 'Описание En',
+    'Slider ID' => 'Слайдер Ид'
+
+
+
+
 
 ];
