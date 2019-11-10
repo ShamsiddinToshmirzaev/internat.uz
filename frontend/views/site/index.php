@@ -1,14 +1,16 @@
 <?php
 
-/* @var $this yii\web\View */
-use yii\helpers\Html;
-$this->title = 'Internat.uz';
+/**
+ * @var $sliderphotos frontend\models\SliderPhotos
+
+ */
+$this->title = 'My Yii Application';
+
 ?>
 
 
 <!--=================================
  header -->
-
 
 
 <!--=================================
@@ -24,10 +26,19 @@ slider- -->
         <li data-target="#animated-slider" data-slide-to="1"></li>
     </ol>
     <!-- Carousel inner -->
+
+    <?php
+    foreach ($sliderphotos as $sliderphoto):
+        ?>
+
+        <img src="<?= $sliderphoto->getImageFileUrl('photo') ?>" alt="" title="#<?= $sliderphoto->id ?>"/>
+    <?php
+    endforeach;
+    ?>
     <div class="carousel-inner">
         <!--/ Carousel item end -->
         <div class="item active">
-            <img class="img-responsive" src="images/slider/slider-09.jpg" alt="slider">
+            <img class="img-responsive" src="<?php $sliderphoto->getThumbFileUrl('photo', 'md', Yii::getAlias('@storage/store/sliders/[[attribute_id]]/[[profile]]_[[filename]].[[extension]]')); ?>" alt="slider">
             <div class="slider-content">
                 <div class="container">
                     <div class="row">
@@ -35,9 +46,12 @@ slider- -->
                             <div class="slider-1">
                                 <span class="animated7">Big Dreams, Big ideas </span>
                                 <h1 class="animated8 text-white">Creative Business template </h1>
-                                <p class="animated8">Template is designed for all types of businesses such as Corporate, Business, Portfolio, Creative, Blog, Agency and many more… </p>
+                                <p class="animated8">Template is designed for all types of businesses such as Corporate,
+                                    Business, Portfolio, Creative, Blog, Agency and many more… </p>
                                 <a href="#" class="button animated8"> <span> Read More </span></a>
-                                <a target="_blank" href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522" class="button button-black animated8"><span> Purchase Now </span> </a>
+                                <a target="_blank"
+                                   href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522"
+                                   class="button button-black animated8"><span> Purchase Now </span> </a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +68,9 @@ slider- -->
                                 <h1 class="animated7 text-white">We are Digital Creative agency</h1>
                                 <p class="animated7">Unique designs, eye-catchy portfolio and innovative website. </p>
                                 <a href="#" class="button animated8"> <span> Read More </span></a>
-                                <a target="_blank" href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522" class="button button-black animated8"><span> Purchase Now </span> </a>
+                                <a target="_blank"
+                                   href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522"
+                                   class="button button-black animated8"><span> Purchase Now </span> </a>
                             </div>
                         </div>
                     </div>
@@ -69,7 +85,6 @@ slider- -->
 slider -->
 
 
-
 <!--=================================
 features -->
 
@@ -80,21 +95,24 @@ features -->
                 <div class="features-14">
                     <span aria-hidden="true" class="icon-bulb"></span>
                     <h4 class="mb-15 text-white">Powerful template</h4>
-                    <p class="text-white">Let success motivate you. Find a picture of what epitomizes success to you and then pull it out when you motivation.</p>
+                    <p class="text-white">Let success motivate you. Find a picture of what epitomizes success to you and
+                        then pull it out when you motivation.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="features-14">
                     <span aria-hidden="true" class="icon-like"></span>
                     <h4 class="mb-15 text-white">Easy to Customize</h4>
-                    <p class="text-white">Make a list of your achievements toward your long-term goal and remind yourself that intentions don’t count, only action’s. </p>
+                    <p class="text-white">Make a list of your achievements toward your long-term goal and remind
+                        yourself that intentions don’t count, only action’s. </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="features-14">
                     <span aria-hidden="true" class="icon-user"></span>
                     <h4 class="mb-15 text-white">Great Blog design</h4>
-                    <p class="text-white">Use a past defeat as a motivator. Remind yourself you have nowhere to go except up as you have already been at the bottom. </p>
+                    <p class="text-white">Use a past defeat as a motivator. Remind yourself you have nowhere to go
+                        except up as you have already been at the bottom. </p>
                 </div>
             </div>
         </div>
@@ -112,7 +130,8 @@ custom content -->
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="section-title-1 text-center">
-                    <p>Welcome to the Corps, Truly ideal solutions for your business. Create a website that you are gonna be proud of.</p>
+                    <p>Welcome to the Corps, Truly ideal solutions for your business. Create a website that you are
+                        gonna be proud of.</p>
                 </div>
             </div>
             <div class="row">
@@ -121,7 +140,11 @@ custom content -->
                 </div>
                 <div class="col-lg-8 col-md-8">
                     <h4>Where Innovation Meets Your Requirements</h4>
-                    <p>the Corps is an exclusive multi-purpose 100% responsive template with powerful features. Simple and well-structured coding, high quality and flexible layout, scalable features along with color schemes to create tailor-cut websites. With bootstrap, responsive mega menu and various layouts including incredible blog themes, the Corps offers you unfathomable accessibility to build beautiful and customer-oriented websites. </p>
+                    <p>the Corps is an exclusive multi-purpose 100% responsive template with powerful features. Simple
+                        and well-structured coding, high quality and flexible layout, scalable features along with color
+                        schemes to create tailor-cut websites. With bootstrap, responsive mega menu and various layouts
+                        including incredible blog themes, the Corps offers you unfathomable accessibility to build
+                        beautiful and customer-oriented websites. </p>
                     <div class="skills-2 mt-80">
                         <ul class="clearfix">
                             <li><h5> Adobe Photoshop </h5>
@@ -131,7 +154,7 @@ custom content -->
                       </span>
                                 </div>
                             </li>
-                            <li> <h5> WordPress </h5>
+                            <li><h5> WordPress </h5>
                                 <div class="bar_container">
                       <span class="bar" data-bar='{ "color": "#ddbe86", "delay": "600" }'>
                         <span class="pct">90%</span>
@@ -178,7 +201,8 @@ our-services -->
                         </div>
                         <div class="feature-15-content">
                             <h4>Creative Ideas</h4>
-                            <p>We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful.</p>
+                            <p>We also know those epic stories, those modern-day legends surrounding the early failures
+                                of such supremely successful.</p>
                         </div>
                     </div>
                 </div>
@@ -189,7 +213,8 @@ our-services -->
                         </div>
                         <div class="feature-15-content">
                             <h4>Beautiful Blog</h4>
-                            <p>We know this in our gut, but what can we do about it? How can we motivate ourselves? One of the most difficult aspects.</p>
+                            <p>We know this in our gut, but what can we do about it? How can we motivate ourselves? One
+                                of the most difficult aspects.</p>
                         </div>
                     </div>
                 </div>
@@ -200,7 +225,8 @@ our-services -->
                         </div>
                         <div class="feature-15-content">
                             <h4>User Friendly</h4>
-                            <p>Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones. Although each successful.</p>
+                            <p>Positive pleasure-oriented goals are much more powerful motivators than negative
+                                fear-based ones. Although each successful.</p>
                         </div>
                     </div>
                 </div>
@@ -213,7 +239,8 @@ our-services -->
                         </div>
                         <div class="feature-15-content">
                             <h4>Super Security</h4>
-                            <p>se a past defeat as a motivator. Remind yourself you have nowhere to go except up as you have already been at the bottom.</p>
+                            <p>se a past defeat as a motivator. Remind yourself you have nowhere to go except up as you
+                                have already been at the bottom.</p>
                         </div>
                     </div>
                 </div>
@@ -224,7 +251,8 @@ our-services -->
                         </div>
                         <div class="feature-15-content">
                             <h4>Portfolio Options</h4>
-                            <p>Do it today. Remind yourself of someone you know who died suddenly and the fact that there is no guarantee that will come.</p>
+                            <p>Do it today. Remind yourself of someone you know who died suddenly and the fact that
+                                there is no guarantee that will come.</p>
                         </div>
                     </div>
                 </div>
@@ -235,7 +263,8 @@ our-services -->
                         </div>
                         <div class="feature-15-content">
                             <h4>Modern Design</h4>
-                            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+                            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in.</p>
                         </div>
                     </div>
                 </div>
@@ -277,7 +306,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/17.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/17.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -291,7 +321,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/18.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/18.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -305,7 +336,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/19.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/19.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -319,7 +351,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/20.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/20.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -333,7 +366,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/21.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/21.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -347,7 +381,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/22.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/22.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -361,7 +396,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/23.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/23.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -375,7 +411,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/24.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/24.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -389,7 +426,8 @@ our-services -->
                             <a href="#">PHOTO ITEM</a>
                         </div>
                         <div class="hover-icon">
-                            <a class="portfolio-img" href="images/portfolio/small/25.jpg"><i class="fa fa-arrows-alt"></i></a>
+                            <a class="portfolio-img" href="images/portfolio/small/25.jpg"><i
+                                        class="fa fa-arrows-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -397,13 +435,13 @@ our-services -->
         </div>
     </div>
     <div class="tree-image">
-        <img class="9img-responsive wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="3.0s" src="images/device/tree.png" alt="">
+        <img class="9img-responsive wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="3.0s"
+             src="images/device/tree.png" alt="">
     </div>
 </section>
 
 <!--=================================
  portfolio -->
-
 
 
 <!--=================================
@@ -415,7 +453,9 @@ custom-content  -->
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-offset-0 left-slide">
                 <span class="text-white">We are creative</span>
                 <h2 class="text-white">We are adding extra value for your business</h2>
-                <p class="text-white">With bootstrap, responsive mega menu and various layouts including incredible blog themes, the Corps offers you unfathomable accessibility to build beautiful and customer-oriented websites. </p>
+                <p class="text-white">With bootstrap, responsive mega menu and various layouts including incredible blog
+                    themes, the Corps offers you unfathomable accessibility to build beautiful and customer-oriented
+                    websites. </p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 pull-right right-slide">
                 <img src="images/about/13.jpg" alt="">
@@ -534,8 +574,11 @@ custom-content  -->
         <div class="row">
             <div class="col-lg-12 col-md-12 text-center">
                 <h2 class="mb-30">Are You Ready to Succeed? Be ready with us!</h2>
-                <p class="mb-30">the Corps offers you unfathomable accessibility to build beautiful and customer-oriented websites. Unique designs, eye-catchy portfolio and innovative website building tools work seamlessly to boost your business online.</p>
-                <a class="button button-black" target="_blank" href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522"><span> Purchase now </span></a>
+                <p class="mb-30">the Corps offers you unfathomable accessibility to build beautiful and
+                    customer-oriented websites. Unique designs, eye-catchy portfolio and innovative website building
+                    tools work seamlessly to boost your business online.</p>
+                <a class="button button-black" target="_blank"
+                   href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522"><span> Purchase now </span></a>
             </div>
         </div>
     </div>

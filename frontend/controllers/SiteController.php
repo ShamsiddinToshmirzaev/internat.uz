@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use backend\models\SliderPhotos;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -74,7 +75,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $sliderphotos = SliderPhotos::find()->with('slider')->all();
+
+        return $this->render('index',[
+            'sliderphotos' => $sliderphotos,
+        ]);
     }
 
     /**

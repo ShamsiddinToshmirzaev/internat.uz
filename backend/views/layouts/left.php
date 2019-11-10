@@ -41,6 +41,10 @@
 <span class="pull-right-container"><small class="label pull-right bg-blue">'
                         .  '</small></span></a>'],
 
+                    ['label' => Yii::t('app','Sliders'), 'icon' => 'th-list', 'url' => ['/sliders/index']],
+                    ['label' => Yii::t('app','Slider Photos'), 'icon' => 'th-list', 'url' => ['/slider-photos/index']],
+
+
                 ],
             ]
         ) ?>

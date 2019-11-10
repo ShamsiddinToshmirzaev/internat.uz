@@ -19,7 +19,12 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "dmstr/yii2-adminlte-asset": "^2.4",
-        "abdualiym/yii2-cms": "dev-master"
+        "abdualiym/yii2-cms": "dev-master",
+        "yii-dream-team/yii2-upload-behavior": "^1.1",
+        "mihaildev/yii2-elfinder": "1.2.2",
+        "mihaildev/yii2-ckeditor": "1.0.1",
+        "kartik-v/yii2-widget-datetimepicker": "v1.4.8"
+
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
