@@ -31,12 +31,13 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    ['label' => Yii::t('app','Students'), 'icon' => 'th-list', 'url' => ['/sites/index']],
-                    ['label' =>  Yii::t('app','Teachers'), 'icon' => 'bookmark', 'url' => ['/tags/index'], 'template' => '<a href="{url}">{icon} 
+                    ['label' => Yii::t('app','Pages'), 'icon' => 'th-list', 'url' => ['/cms/pages/index']],
+                    ['label' =>  Yii::t('app','Articles'), 'icon' => 'bookmark', 'url' => ['/cms/articles/index'], 'template' => '<a href="{url}">{icon} 
 {label}<span class="pull-right-container"><small class="label pull-right">' . '</small></span></a>'],
-                    ['label' =>  Yii::t('app','Subjects'), 'icon' => 'th-list', 'url' => ['/contacts/index'], 'template' => '<a href="{url}">{icon} {label}
+                    ['label' =>  Yii::t('app','Article Categories'), 'icon' => 'th-list', 'url' => ['/cms/article-categories/index
+'], 'template' => '<a href="{url}">{icon} {label}
 <span class="pull-right-container"><small class="label pull-right bg-blue">' . '</small></span></a>'],
-                    ['label' => 'Articles', 'icon' => 'th-list', 'url' => ['/tags-and-sites/index'], 'template' => '<a href="{url}">{icon} {label}
+                    ['label' => 'Menu', 'icon' => 'th-list', 'url' => ['/cms/menu/index'], 'template' => '<a href="{url}">{icon} {label}
 <span class="pull-right-container"><small class="label pull-right bg-blue">'
                         .  '</small></span></a>'],
 

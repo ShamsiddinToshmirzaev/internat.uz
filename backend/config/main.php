@@ -1,4 +1,7 @@
 <?php
+
+use yii\filters\AccessControl;
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -11,11 +14,22 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+
+    ],
+
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@backend/views' => '@backend/views/yii2-app'
+                ],
+            ],
+        ],
+
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -37,14 +51,36 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
+//        'urlManager' => [
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//            'rules' => [
+//            ],
+//        ],
+
+    ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'baseUrl' => $params['storageHostInfo'],
+                'basePath' => '@storage',
+                'path' => 'elfinder-files',
+                'name' => 'Files',
             ],
         ],
-        */
+    ],
+    'as access' => [
+        'class' => AccessControl::class,
+        'except' => ['site/login', 'site/error', 'site/logout', 'site/signup'],
+        'rules' => [
+            [
+                'allow' => true,
+                'roles' => ['@']
+            ],
+        ],
+
     ],
     'params' => $params,
 ];
