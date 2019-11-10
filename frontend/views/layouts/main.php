@@ -6,8 +6,6 @@ AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,27 +33,97 @@ AppAsset::register($this);
 <!--=================================
  preloader -->
 
+
+
 <!--Navbar-->
-<header id="header" class="header-6">
+<!--=================================
+ header -->
+
+<header id="header" class="header">
+    <div class="topbar">
+        <div class="container">
+            <div class="row search-main">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="topbar-left text-left">
+                        <ul>
+                            <li><i class="fa fa-envelope-o text-blue"></i> support@thecorps.com</li>
+                            <li><i class="fa fa-phone text-blue"></i> +0123 456 789</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="topbar-right text-right">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="login" href="#"><i class="fa fa-lock text-blue"></i> Login</a>
+                                <div class="login-1 login-open text-left">
+                                    <form class="form-signin">
+                                        <div class="form-group">
+                                            <label>Username</label>
+                                            <input type="text" class="form-control" name="username" placeholder="Email Address"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" name="password" placeholder="Password"/>
+                                        </div>
+                                        <div class="remember-checkbox">
+                                            <input type="checkbox" name="one" id="one" />
+                                            <label class="remember" for="one">Remember me</label>
+                                        </div>
+                                        <a href="#" class="button">
+                                            <span>Login</span>
+                                        </a>
+                                        <span>-or-</span>
+                                        <a href="register-1.html" class="button button-grey">
+                                            <span>Register</span>
+                                        </a>
+                                        <a href="#">Forgot password ?</a>
+                                    </form>
+                                    <div class="login-with">
+                                        <span>Login With: </span>
+                                        <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                        <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="register-1.html"><i class="fa fa-user text-blue"></i> Register</a></li>
+                            <li><div class="search"><a href="#"><i class="fa fa-search"></i></a></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search-open">
+                    <input class="form-control" type="text" placeholder="Type & Hit Enter..">
+                    <div class="search-close"><i class="fa fa-times"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=================================
+     mega menu -->
+
     <div class="menu">
         <!-- menu start -->
         <nav id="menu-1" class="mega-menu">
             <!-- menu list items container -->
             <section class="menu-list-items">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <!-- menu logo -->
                             <ul class="menu-logo">
                                 <li>
-                                    <a href="/"><img id="logo_dark_img" src="images/logo-dark.png" alt="logo"> </a>
+                                    <a href="/"><img id="logo_img" src="images/logo.png" alt="logo"> </a>
                                 </li>
                             </ul>
                             <!-- menu links -->
                             <ul class="menu-links">
                                 <!-- active class -->
-                                <li class="active"><a href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a>
-                                    <div class="drop-down grid-col-5 offset-4">
+                                <li><a href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a>
+                                    <div class="drop-down grid-col-8 offset-4">
                                         <!--grid row-->
                                         <div class="grid-row">
                                             <!--grid column 3-->
@@ -70,7 +138,7 @@ AppAsset::register($this);
                                             </div>
                                             <div class="grid-col-4">
                                                 <ul>
-                                                    <li class="active"><a href="home-6-business.html">Home 6 - Business <span class="label label-info ml-10">New</span> </a></li>
+                                                    <li><a href="home-6-business.html">Home 6 - Business <span class="label label-info ml-10">New</span> </a></li>
                                                     <li><a href="home-7-classic.html">Home 7 - Classic <span class="label label-primary ml-10">New</span></a></li>
                                                     <li><a href="home-8-agency.html">Home 8 - Agency <span class="label label-success ml-10">New</span></a></li>
                                                     <li><a href="home-9-personal.html">Home 9 - Personal <span class="label label-warning ml-10">New</span></a></li>
@@ -89,7 +157,7 @@ AppAsset::register($this);
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="javascript:void(0)">Pages <i class="fa fa-angle-down fa-indicator"></i></a>
+                                <li class="active"><a href="javascript:void(0)">Pages <i class="fa fa-angle-down fa-indicator"></i></a>
                                     <!-- drop down full width -->
                                     <div class="drop-down menu-bg grid-col-12">
                                         <!--grid row-->
@@ -142,7 +210,7 @@ AppAsset::register($this);
                                                     <li><a href="coming-soon-2.html">coming soon 2 </a></li>
                                                     <li><a href="page-left-sidebar.html">page left sidebar </a></li>
                                                     <li><a href="page-right-sidebar.html">page right sidebar </a></li>
-                                                    <li><a href="page-two-sidebar.html">page two sidebar </a></li>
+                                                    <li class="active"><a href="<?= \yii\helpers\Url::to(['site/page'])?>">page two sidebar </a></li>
                                                     <li><a href="sitemap.html">sitemap </a></li>
                                                     <li><a href="terms-and-conditions.html">terms and conditions </a></li>
                                                     <li><a href="privacy-policy.html">privacy policy </a></li>
@@ -343,47 +411,6 @@ AppAsset::register($this);
                                         <li><a href="contact-3.html">Contact 3</a></li>
                                     </ul>
                                 </li>
-                                <li class="seaech">
-                                    <div class="search-3">
-                                        <a class="search-btn not_click" href="javascript:void(0);">Search Button</a>
-                                        <div class="search-3-box not-click">
-                                            <input type="text" class="not-click placeholder" placeholder="Search" value="" name="s">
-                                            <i class="fa fa-search"></i>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a class="login" href="#"> Login</a>
-                                    <div class="login-1 login-open text-left">
-                                        <form class="form-signin">
-                                            <div class="form-group">
-                                                <label>Username</label>
-                                                <input type="text" class="form-control" name="username" placeholder="Email Address"/>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Password</label>
-                                                <input type="password" class="form-control" name="password" placeholder="Password"/>
-                                            </div>
-                                            <div class="remember-checkbox">
-                                                <input type="checkbox" name="one" id="one" />
-                                                <label class="remember" for="one">Remember me</label>
-                                            </div>
-                                            <a href="#" class="button">
-                                                <span>Login</span>
-                                            </a>
-                                            <span>-or-</span>
-                                            <a href="register-1.html" class="button button-grey">
-                                                <span>Register</span>
-                                            </a>
-                                            <a href="#">Forgot password ?</a>
-                                        </form>
-                                        <div class="login-with">
-                                            <span>Login With: </span>
-                                            <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-                                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                                            <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -393,6 +420,32 @@ AppAsset::register($this);
         <!-- menu end -->
     </div>
 </header>
+
+<!--=================================
+ header -->
+
+
+<!--=================================
+ inner-intro-->
+
+<section class="inner-intro bg-2 bg-opacity-black-70">
+    <div class="container">
+        <div class="row text-center intro-title">
+            <h1 class="text-blue">We Are The Corps</h1>
+            <p class="text-white">We know the secret of your success</p>
+            <ul class="page-breadcrumb">
+                <li><a href=""><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
+                <li><a href="">pages</a> <i class="fa fa-angle-double-right"></i></li>
+                <li><span>page-two-sidebar</span> </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--=================================
+ inner-intro-->
+
+
 
 <!--End of Navbar-->
 

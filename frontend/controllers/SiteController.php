@@ -145,6 +145,17 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+
+    /**
+     * Displays Page.
+     *
+     * @return mixed
+     */
+    public function actionPage()
+    {
+        return $this->render('page');
+    }
+
     /**
      * Signs user up.
      *
