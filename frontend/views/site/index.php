@@ -537,29 +537,3 @@ custom-content  -->
 custom-content -->
 
 
-<!--=================================
- action-box -->
-
-<section class="action-box">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <h3 class="text-white">The Corps Unique & Clean HTML5 Multi-Purpose Template</h3>
-                <p class="text-white">We are a creative company, who works with passion and love. We provide the best services you need. </p>
-            </div>
-            <div class="col-lg-4 col-md-4 text-right action-box-button">
-                <a href="#" class="button button-white mt-15">
-                    <span>More Demo</span>
-                    <i class="fa fa-hand-o-right"></i>
-                </a>
-                <a target="_blank" href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522" class="button button-black mt-15">
-                    <span>Purchase Now</span>
-                    <i class="fa fa-download"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--=================================
- action-box -->

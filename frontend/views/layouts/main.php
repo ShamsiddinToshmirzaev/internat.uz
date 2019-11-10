@@ -338,7 +338,7 @@ AppAsset::register($this);
                                 <li><a href="javascript:void(0)"> Contact <i class="fa fa-angle-down fa-indicator"></i></a>
                                     <!-- drop down multilevel  -->
                                     <ul class="drop-down-multilevel right-menu">
-                                        <li><a href="contact-1.html">Contact 1</a></li>
+                                        <li><a href="<?= \yii\helpers\Url::to(['site/contact'])?>">Contact 1</a></li>
                                         <li><a href="contact-2.html">Contact 2</a></li>
                                         <li><a href="contact-3.html">Contact 3</a></li>
                                     </ul>
@@ -406,6 +406,33 @@ AppAsset::register($this);
 <!-- //content -->
 
 
+
+<!--=================================
+ action-box -->
+
+<section class="action-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <h3 class="text-white">The Corps Unique & Clean HTML5 Multi-Purpose Template</h3>
+                <p class="text-white">We are a creative company, who works with passion and love. We provide the best services you need. </p>
+            </div>
+            <div class="col-lg-4 col-md-4 text-right action-box-button">
+                <a href="#" class="button button-white mt-15">
+                    <span>More Demo</span>
+                    <i class="fa fa-hand-o-right"></i>
+                </a>
+                <a href="#" class="button button-black mt-15">
+                    <span>Purchase Now</span>
+                    <i class="fa fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=================================
+ action-box -->
 
 <!--=================================
  footer -->
