@@ -37,7 +37,7 @@
                     ['label' =>  Yii::t('app','Article Categories'), 'icon' => 'th-list', 'url' => ['/cms/article-categories/index
 '], 'template' => '<a href="{url}">{icon} {label}
 <span class="pull-right-container"><small class="label pull-right bg-blue">' . '</small></span></a>'],
-                    ['label' => 'Menu', 'icon' => 'th-list', 'url' => ['/cms/menu/index'], 'template' => '<a href="{url}">{icon} {label}
+                    ['label' => Yii::t('app','Menu'), 'icon' => 'th-list', 'url' => ['/cms/menu/index'], 'template' => '<a href="{url}">{icon} {label}
 <span class="pull-right-container"><small class="label pull-right bg-blue">'
                         .  '</small></span></a>'],
 

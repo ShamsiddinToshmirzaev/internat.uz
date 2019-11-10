@@ -20,6 +20,7 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+//        For language
         'i18n' => [
             'translations' => [
                 'app*' => [
@@ -34,7 +35,7 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
-//            'showScriptName' => true,
+            'showScriptName' => true,
             'rules' => [
             ],
         ],
