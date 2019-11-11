@@ -75,6 +75,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout = 'main-index';
+
         $sliderphotos = SliderPhotos::find()->with('slider')->all();
 
         return $this->render('index',[
@@ -160,6 +162,17 @@ class SiteController extends Controller
     {
         return $this->render('page');
     }
+
+    /**
+     * Displays blog page.
+     *
+     * @return mixed
+     */
+    public function actionBlog()
+    {
+        return $this->render('blog');
+    }
+
 
     /**
      * Signs user up.
