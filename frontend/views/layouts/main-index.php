@@ -1,6 +1,7 @@
 <?php
 use frontend\assets\AppAsset;
 use yii\helpers\Html;
+use frontend\controllers\SiteController;
 
 AppAsset::register($this);
 ?>
@@ -50,7 +51,7 @@ AppAsset::register($this);
                             <!-- menu logo -->
                             <ul class="menu-logo">
                                 <li>
-                                    <a href="/"><img id="logo_dark_img" src="images/logo-dark.png" alt="logo"> </a>
+                                    <a href="/"><img id="logo_dark_img" src="/images/logo-dark.png" alt="logo"> </a>
                                 </li>
                             </ul>
                             <!-- menu links -->
@@ -403,6 +404,19 @@ AppAsset::register($this);
 <!--=================================
 slider- -->
 
+
+<?php
+//foreach ($sliderphotos as $slider_photo):
+//    print $slider_photo;
+?>
+
+
+
+<?php
+//    endforeach;
+    ?>
+
+
 <section id="animated-slider" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -413,7 +427,7 @@ slider- -->
     <div class="carousel-inner">
         <!--/ Carousel item end -->
         <div class="item active">
-            <img class="img-responsive" src="images/slider/slider-09.jpg" alt="slider">
+            <img class="img-responsive" src="/images/slider/slider-09.jpg" alt="slider">
             <div class="slider-content">
                 <div class="container">
                     <div class="row">
@@ -431,7 +445,7 @@ slider- -->
             </div>
         </div>
         <div class="item">
-            <img class="img-responsive" src="images/slider/slider-10.jpg" alt="slider">
+            <img class="img-responsive" src="/images/slider/slider-10.jpg" alt="slider">
             <div class="slider-content">
                 <div class="container">
                     <div class="row">

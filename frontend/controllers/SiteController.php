@@ -79,6 +79,9 @@ class SiteController extends Controller
 
         $sliderphotos = SliderPhotos::find()->with('slider')->all();
 
+//        print($sliderphotos);
+
+
         return $this->render('index',[
             'sliderphotos' => $sliderphotos,
         ]);

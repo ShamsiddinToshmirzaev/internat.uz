@@ -116,7 +116,7 @@ AppAsset::register($this);
                             <!-- menu logo -->
                             <ul class="menu-logo">
                                 <li>
-                                    <a href="/"><img id="logo_img" src="images/logo.png" alt="logo"> </a>
+                                    <a href="/"><img id="logo_img" src="/images/logo.png" alt="logo"> </a>
                                 </li>
                             </ul>
                             <!-- menu links -->
