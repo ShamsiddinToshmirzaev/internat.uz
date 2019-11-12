@@ -2,6 +2,7 @@
 use frontend\assets\AppAsset;
 use yii\helpers\Html;
 use frontend\controllers\SiteController;
+use frontend\models\SliderPhotos;
 
 AppAsset::register($this);
 ?>
@@ -405,65 +406,9 @@ AppAsset::register($this);
 slider- -->
 
 
-<?php
-//foreach ($sliderphotos as $slider_photo):
-//    print $slider_photo;
-?>
 
 
 
-<?php
-//    endforeach;
-    ?>
-
-
-<section id="animated-slider" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#animated-slider" data-slide-to="0" class="active"></li>
-        <li data-target="#animated-slider" data-slide-to="1"></li>
-    </ol>
-    <!-- Carousel inner -->
-    <div class="carousel-inner">
-        <!--/ Carousel item end -->
-        <div class="item active">
-            <img class="img-responsive" src="/images/slider/slider-09.jpg" alt="slider">
-            <div class="slider-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <div class="slider-1">
-                                <span class="animated7">Big Dreams, Big ideas </span>
-                                <h1 class="animated8 text-white">Creative Business template </h1>
-                                <p class="animated8">Template is designed for all types of businesses such as Corporate, Business, Portfolio, Creative, Blog, Agency and many more… </p>
-                                <a href="#" class="button animated8"> <span> Read More </span></a>
-                                <a target="_blank" href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522" class="button button-black animated8"><span> Purchase Now </span> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="img-responsive" src="/images/slider/slider-10.jpg" alt="slider">
-            <div class="slider-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <div class="slider-2">
-                                <h1 class="animated7 text-white">We are Digital Creative agency</h1>
-                                <p class="animated7">Unique designs, eye-catchy portfolio and innovative website. </p>
-                                <a href="#" class="button animated8"> <span> Read More </span></a>
-                                <a target="_blank" href="http://themeforest.net/item/the-corps-multipurpose-html5-template/15623522" class="button button-black animated8"><span> Purchase Now </span> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ Carousel item end -->
-    </div>
-</section>
 
 <!--=================================
 slider -->

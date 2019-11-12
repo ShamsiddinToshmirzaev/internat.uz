@@ -9,6 +9,8 @@ $this->title = 'My Yii Application';
 ?>
 
 
+
+
 <!--=================================
  Blog-->
 
@@ -20,13 +22,13 @@ $this->title = 'My Yii Application';
                     <div class="blog-entry-slider">
                         <div class="owl-carousel-6">
                             <div class="item">
-                                <img src="images/blog/01.jpg" alt="Should be image">
+                                <img src="/images/blog/01.jpg" alt="Should be image">
                             </div>
                             <div class="item">
-                                <img src="images/blog/02.jpg" alt="">
+                                <img src="/images/blog/02.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="images/blog/03.jpg" alt="">
+                                <img src="/images/blog/03.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -65,7 +67,7 @@ $this->title = 'My Yii Application';
                 <div class="blog-entry post-2">
                     <div class="blog-entry-image hover-direction clearfix">
                         <div class="portfolio-item">
-                            <img class="img-responsive" src="images/blog/big/06.jpg" alt="">
+                            <img class="img-responsive" src="/images/blog/big/06.jpg" alt="">
                             <div class="portfolio-caption">
                                 <div class="portfolio-overlay">
                                     <a href="#"><i class="fa fa-plus"></i></a>

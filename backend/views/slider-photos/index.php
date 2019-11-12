@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'photo',
                 'value' => function (\backend\models\SliderPhotos $model) {
-                    return Html::a(Html::img($model->getThumbFileUrl('photo', 's32')), ['slider-photos/view', 'id' => $model->id]);
+                    return Html::a(Html::img($model->getThumbFileUrl('photo', 's32', Yii::getAlias('@storageRoot/store/sliders/[[attribute_id]]/[[filename]].[[extension]]'))));
                 },
                 'format' => 'raw',
             ],

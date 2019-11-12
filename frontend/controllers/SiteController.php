@@ -1,4 +1,5 @@
 <?php
+
 namespace frontend\controllers;
 
 use backend\models\SliderPhotos;
@@ -6,6 +7,7 @@ use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -77,12 +79,11 @@ class SiteController extends Controller
     {
         $this->layout = 'main-index';
 
-        $sliderphotos = SliderPhotos::find()->with('slider')->all();
+        $sliderphotos = \frontend\models\SliderPhotos::find()->with('slider')->all();
 
-//        print($sliderphotos);
+//        VarDumper::dump($sliderphotos, 12, true);die;
 
-
-        return $this->render('index',[
+        return $this->render('index', [
             'sliderphotos' => $sliderphotos,
         ]);
     }
@@ -248,8 +249,8 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @throws BadRequestHttpException
      * @return yii\web\Response
+     * @throws BadRequestHttpException
      */
     public function actionVerifyEmail($token)
     {

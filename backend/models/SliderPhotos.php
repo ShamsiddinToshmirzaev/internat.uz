@@ -50,7 +50,7 @@ class SliderPhotos extends \yii\db\ActiveRecord
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
             [['slider_id'], 'exist', 'skipOnError' => true, 'targetClass' => Sliders::className(), 'targetAttribute' => ['slider_id' => 'id']],
             [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
-            ['photo', 'image', 'extensions' => 'jpeg, png, jpg, gif', 'skipOnEmpty' => true, 'checkExtensionByMimeType' => true],
+            ['photo', 'image', 'maxWidth' => 1920, 'maxHeight' => 1000,'extensions' => 'jpeg, png, jpg, gif', 'skipOnEmpty' => true, 'checkExtensionByMimeType' => true],
         ];
     }
     public function behaviors()

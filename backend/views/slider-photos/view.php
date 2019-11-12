@@ -25,12 +25,27 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="box">
+                <div class="box-body">
+                    <img src="<?= $model->getThumbFileUrl('photo', 'md', Yii::getAlias('@storageHostInfo/store/sliders/[[attribute_id]]/[[filename]].[[extension]]')) ?>">
+                    <?= DetailView::widget([
+                        'model' => $model,
+                        'attributes' => [
+                            'id',
+
+                        ],
+                    ]) ?>
+                </div>
+            </div>
+        </div>
+
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
             'slider_id',
-            'photo',
             'sort',
             'created_by',
             'updated_by',
