@@ -62,7 +62,36 @@ use yii\captcha\Captcha;
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                <div id="formmessage">Success/Error Message Goes Here</div>
+                <div id="formmessage" style="display: inline-block;">
+<!--                    Success/Error Message Goes Here-->
+                        <?php if (Yii::$app->session->hasFlash('success')): ?>
+                            <div style="margin:5px 0 0 0;"
+                                 class="alert alert-success"><?= Yii::t('app', 'Thank you for contacting us. We will respond to you as soon as possible.') ?></div>
+                        <?php elseif (Yii::$app->session->hasFlash('error')): ?>
+                            <div style="margin:5px 0 0 0;"
+                                 class="alert alert-danger"><?= Yii::t('app', 'There was an error sending email.') ?></div>
+                        <?php else: ?>
+                        <?php endif; ?>
+                </div>
+
+                <?php $form = ActiveForm::begin(); ?>
+
+                <?= $form->field($model, 'name')->textInput() ?>
+
+                <?= $form->field($model, 'email')->textInput() ?>
+
+                <?= $form->field($model, 'phone')->textInput() ?>
+
+
+                <?= $form->field($model, 'message')->textArea(array('rows' => 8, 'cols' => 5)) ?>
+
+                <div class="form-group">
+                    <?= Html::submitButton(Yii::t('app', 'Send'), ['class' => 'btn btn-primary']) ?>
+                </div>
+
+                <?php ActiveForm::end(); ?>
+
+<!--TODO  work with design-->
                 <form class="form-horizontal" id="contactform" role="form" method="post" action="php/contact-form.php">
                     <div class="contact-form">
                         <div class="section-field">
@@ -81,10 +110,11 @@ use yii\captcha\Captcha;
                             <i class="fa fa-pencil"></i>
                             <textarea class="input-message" placeholder="Comment*" rows="7" name="message"></textarea>
                         </div>
-                        <input type="hidden" name="action" value="sendEmail"/>
+<!--                        <input type="hidden" name="action" value="sendEmail"/>-->
                         <button id="submit" name="submit" type="submit" value="Send" class="button mt-15"><span> Send your message </span> <i class="fa fa-paper-plane"></i></button>
                     </div>
                 </form>
+
                 <div id="ajaxloader" style="display:none"><img class="center-block mt-30 mb-30" src="images/ajax-loader.gif" alt=""></div>
             </div>
         </div>
