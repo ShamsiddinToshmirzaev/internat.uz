@@ -9,7 +9,7 @@ use yii\helpers\Url;
     </div>
 
     <div class="col-sm-4">
-        <a href="<?= Url::to(['blog/view', 'slug' => $model->slug]) ?>" data-pjax="0"><img class="img-responsive" src="<?= $model->getThumbFileUrl('photo', 'lg') ?>" alt="<?= $model->category->title_0 ?>"></a>
+        <a href="<?= Url::to(['blog/view', 'slug' => $model->slug]) ?>" data-pjax="0"><img class="img-responsive" src="<?= $model->getImageFileUrl('photo', Yii::getAlias('@storageHostInfo/data/articles/[[attribute_id]]/[[filename]].[[extension]]')) ?>" alt="<?= $model->category->title_0 ?>"></a>
     </div>
 
     <div class="col-sm-8">
