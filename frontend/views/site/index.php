@@ -17,19 +17,10 @@ $this->title = 'My Yii Application';
     <!-- Carousel inner -->
     <div class="carousel-inner">
         <?php
+        $i = 0;
         foreach ($sliderphotos as $sliderphoto):
             ?>
-            <!--/ Carousel item end -->
-<!--TODO some logic here-->
-        <?php $i=0 ;
-        if ($i == 0){  echo ' <div class="item active">';   ?>
-
-        <?php } else {
-            echo '<div class="item ">';
-        }
-        $i++;
-        ?>
-            <div class="item active">
+            <div class="item <?php if ($i == 0) { echo 'active';} else { echo '';} $i++; ?>">
                 <img class="img-responsive"
                      src="<?= $sliderphoto->getImageFileUrl('photo', Yii::getAlias('@storageHostInfo/store/sliders/[[attribute_id]]/[[filename]].[[extension]]')); ?>"
                      alt="slider">
