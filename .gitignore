@@ -42,8 +42,8 @@ phpunit.phar
 /backend/web/index-test.php
 /backend/web/robots.txt
 
-/storage/data/articles
-/storage/store/articles
+/storage/data/
+/storage/store/
 /storage/cache
 
 composer.lock
